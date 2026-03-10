@@ -1,0 +1,16 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      DEPLOY_ENV: ${{ vars.DEPLOY_ENV }}
+
+    steps:
+      - name: Print variable
+        run: echo "Deploying to $DEPLOY_ENV"
