@@ -1,0 +1,14 @@
+name: Java CI with Maven
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment: dev
+
+    steps:
+      - name: Print variable
+        run: echo "Deploying to ${{ vars.DEPLOY_ENV }}"
